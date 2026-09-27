@@ -30,7 +30,7 @@ public class AuthController {
     public UserResponse register(@Valid @RequestBody Credentials credentials) {
         try {
             User user = userService.register(credentials.username(), credentials.password());
-            return new UserResponse(user.getId(), user.getUsername());
+            return UserResponse.from(user);
         } catch (DataIntegrityViolationException e) {
             throw new ResponseStatusException(HttpStatus.CONFLICT, "Username is already taken");
         }
