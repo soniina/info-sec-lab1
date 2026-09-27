@@ -1,4 +1,5 @@
 # Работа 1. Разработка защищенного REST API с интеграцией в CI/CD
+
 ## Павличенко Софья P3415
 
 Приложение на Java 21, Spring Boot, Maven и PostgreSQL. Пользователь может зарегистрироваться, войти и получить список пользователей после аутентификации.
@@ -37,6 +38,11 @@ curl http://localhost:8080/api/data \
 - **Аутентификация:** пароли хранятся в виде BCrypt-хэшей. При входе пароль сравнивается с хэшем, после чего выдаётся подписанный JWT сроком на один час. Spring Security проверяет подпись и срок действия токена перед доступом к `/api/data`.
 
 ## Отчёты
+
 ### SpotBugs
 
+![Отчёт SpotBugs](screenshots/spotbugs.png)
+
 ### OWASP Dependency-Check
+
+![Отчёт OWASP Dependency-Check](screenshots/dependency-check.png)
