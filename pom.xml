@@ -53,6 +53,23 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+            <plugin>
+                <groupId>com.github.spotbugs</groupId>
+                <artifactId>spotbugs-maven-plugin</artifactId>
+                <version>4.10.4.1</version>
+                <configuration>
+                    <htmlOutput>true</htmlOutput>
+                    <xmlOutput>true</xmlOutput>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.owasp</groupId>
+                <artifactId>dependency-check-maven</artifactId>
+                <version>12.2.2</version>
+                <configuration>
+                    <failBuildOnCVSS>9.0</failBuildOnCVSS>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 </project>
