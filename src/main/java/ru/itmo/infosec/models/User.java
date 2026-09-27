@@ -1,4 +1,4 @@
-package ru.itmo.infosec;
+package ru.itmo.infosec.models;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -9,7 +9,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "app_users")
-public class AppUser {
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,10 +21,10 @@ public class AppUser {
     @Column(nullable = false)
     private String passwordHash;
 
-    protected AppUser() {
+    protected User() {
     }
 
-    public AppUser(String username, String passwordHash) {
+    public User(String username, String passwordHash) {
         this.username = username;
         this.passwordHash = passwordHash;
     }

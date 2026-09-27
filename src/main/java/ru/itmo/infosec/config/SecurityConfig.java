@@ -1,4 +1,4 @@
-package ru.itmo.infosec;
+package ru.itmo.infosec.config;
 
 import java.nio.charset.StandardCharsets;
 import javax.crypto.SecretKey;
